@@ -81,6 +81,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\LicencieDetailPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\LicenciesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

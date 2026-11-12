@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace HandClub360.core.Models;
 
 public class Licencie
@@ -44,13 +45,19 @@ public class Licencie
     public bool AutorisationTransport { get; set; }
 
     // Trombinoscope
-    public string PhotoPath { get; set; } = "";
+    public string PhotoPath { get; set; } = "default_male.png";
 
-    // Categorie
+    public string NomComplet => $"{Prenom} {Nom}";
+
+
+    // Categorie / Role
     public string Categorie
     {
         get
         {
+            if (!EstJoueur)
+                return "Non joueur";
+
             int age = DateTime.Today.Year - DateNaissance.Year;
 
             if (DateNaissance.Date > DateTime.Today.AddYears(-age))
@@ -68,6 +75,37 @@ public class Licencie
         }
     }
 
+    public bool EstJoueur { get; set; }
+
+    public bool EstEntraineur { get; set; }
+
+    public bool EstDirigeant { get; set; }
+
+    public bool EstMembreCA { get; set; }
+
+    public bool EstArbitre { get; set; }
+
+    public bool EstOfficielTable { get; set; }
+
+    public bool EstBenevole { get; set; }
+
+    public string RolesAffichage
+    {
+        get
+        {
+            var roles = new List<string>();
+
+            if (EstJoueur) roles.Add("Joueur");
+            if (EstEntraineur) roles.Add("Entraîneur");
+            if (EstDirigeant) roles.Add("Dirigeant");
+            if (EstMembreCA) roles.Add("CA");
+            if (EstArbitre) roles.Add("Arbitre");
+            if (EstOfficielTable) roles.Add("Officiel");
+            if (EstBenevole) roles.Add("Bénévole");
+
+            return string.Join(" • ", roles);
+        }
+    }
 
     // Equipe principale
     public Guid? EquipePrincipaleId { get; set; }
