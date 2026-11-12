@@ -46,7 +46,27 @@ public partial class LicenciesPage : ContentPage
         else
             categorie = "Senior";
 
-        CategorieLabel.Text =
+        bool estMineur = age < 18;
+
+        TuteurLayout.IsVisible = estMineur;
+
+        if (estMineur)
+        {
+            TelephoneEntry.Placeholder =
+                "Téléphone du licencié (optionnel)";
+
+            EmailEntry.Placeholder =
+                "Email du licencié (optionnel)";
+        }
+        else
+        {
+            TelephoneEntry.Placeholder =
+                "Téléphone";
+
+            EmailEntry.Placeholder =
+                "Email";
+        }
+                CategorieLabel.Text =
             $"Catégorie : {categorie}";
     }
     protected override async void OnAppearing()

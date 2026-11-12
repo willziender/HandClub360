@@ -13,6 +13,9 @@ public class Licencie
     public string Nom { get; set; } = "";
     public string Prenom { get; set; } = "";
     public DateTime DateNaissance { get; set; }
+    public bool EstMineur { get; set; }
+    public string ContactUrgenceNom { get; set; } = "";
+    public string ContactUrgenceTelephone { get; set; } = "";
     public string Sexe { get; set; } = "";
     public string TailleMaillot { get; set; } = "";
     public string TailleShort { get; set; } = "";

@@ -62,27 +62,34 @@
             <Entry
     x:Name="VilleEntry"
     Placeholder="Ville" />
-            
-            <Label
-    Text="Tuteur légal"
-    FontSize="22"
-    FontAttributes="Bold" />
 
-            <Entry
-    x:Name="NomTuteurEntry"
-    Placeholder="Nom du tuteur" />
+            <VerticalStackLayout
+    x:Name="TuteurLayout"
+    IsVisible="False"
+    Spacing="10">
 
-            <Entry
-    x:Name="PrenomTuteurEntry"
-    Placeholder="Prénom du tuteur" />
+                <Label
+        Text="Tuteur légal"
+        FontSize="22"
+        FontAttributes="Bold" />
 
-            <Entry
-    x:Name="EmailTuteurEntry"
-    Placeholder="Email du tuteur" />
+                <Entry
+        x:Name="NomTuteurEntry"
+        Placeholder="Nom du tuteur" />
 
-            <Entry
-    x:Name="TelephoneTuteurEntry"
-    Placeholder="Téléphone du tuteur" />
+                <Entry
+        x:Name="PrenomTuteurEntry"
+        Placeholder="Prénom du tuteur" />
+
+                <Entry
+        x:Name="EmailTuteurEntry"
+        Placeholder="Email du tuteur" />
+
+                <Entry
+        x:Name="TelephoneTuteurEntry"
+        Placeholder="Téléphone du tuteur" />
+
+            </VerticalStackLayout>
 
             <Button
                 Text="Ajouter le licencié"
