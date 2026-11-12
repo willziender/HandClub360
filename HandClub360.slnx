@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Éléments de solution/">
+    <File Path=".gitignore" />
+  </Folder>
   <Project Path="HandClub360.core/HandClub360.core.csproj" />
   <Project Path="HandClub360.data/HandClub360.data.csproj" />
   <Project Path="HandClub360.UI/HandClub360.UI.csproj" Id="45997137-cd79-45e0-804d-4cd97ffb4e32" />
