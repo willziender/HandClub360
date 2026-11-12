@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HandClub360.UI.Views.LicenciesPage">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="10">
+
+            <Label
+                Text="Gestion des licenciés"
+                FontSize="28"
+                FontAttributes="Bold"/>
+
+            <Entry
+    x:Name="NomEntry"
+    Placeholder="Nom" />
+
+            <Entry
+    x:Name="PrenomEntry"
+    Placeholder="Prénom" />
+
+            <DatePicker
+    x:Name="DateNaissancePicker" />
+
+            <Picker
+    x:Name="SexePicker"
+    Title="Sexe">
+
+                <Picker.Items>
+                    <x:String>M</x:String>
+                    <x:String>F</x:String>
+                </Picker.Items>
+
+            </Picker>
+            
+            <Label
+    x:Name="CategorieLabel"
+    Text="Catégorie : non calculée"
+    FontAttributes="Bold"/>
+
+            <Entry
+    x:Name="TelephoneEntry"
+    Placeholder="Téléphone" />
+
+            <Entry
+    x:Name="EmailEntry"
+    Placeholder="Email" />
+
+            <Entry
+    x:Name="AdresseEntry"
+    Placeholder="Adresse" />
+
+            <Entry
+    x:Name="CodePostalEntry"
+    Placeholder="Code Postal" />
+
+            <Entry
+    x:Name="VilleEntry"
+    Placeholder="Ville" />
+            
+            <Label
+    Text="Tuteur légal"
+    FontSize="22"
+    FontAttributes="Bold" />
+
+            <Entry
+    x:Name="NomTuteurEntry"
+    Placeholder="Nom du tuteur" />
+
+            <Entry
+    x:Name="PrenomTuteurEntry"
+    Placeholder="Prénom du tuteur" />
+
+            <Entry
+    x:Name="EmailTuteurEntry"
+    Placeholder="Email du tuteur" />
+
+            <Entry
+    x:Name="TelephoneTuteurEntry"
+    Placeholder="Téléphone du tuteur" />
+
+            <Button
+                Text="Ajouter le licencié"
+                Clicked="OnAjouterClicked"/>
+
+            <Label
+                Text="Liste des licenciés"
+                FontSize="22"
+                FontAttributes="Bold"
+                Margin="0,20,0,0"/>
+
+            <CollectionView
+                x:Name="LicenciesCollection">
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <Border
+                            Stroke="#D3D3D3"
+                            StrokeThickness="1"
+                            Margin="0,5">
+
+                            <VerticalStackLayout Padding="10">
+
+                                <Label
+                                    Text="{Binding Nom}"
+                                    FontAttributes="Bold"/>
+
+                                <Label
+                                    Text="{Binding Prenom}"/>
+
+                                <Label
+                                    Text="{Binding Email}"/>
+
+                            </VerticalStackLayout>
+
+                        </Border>
+
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
+    

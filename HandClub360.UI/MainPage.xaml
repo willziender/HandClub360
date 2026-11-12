@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HandClub360.UI.MainPage"
+    BackgroundColor="#F7F9FC">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="15">
+
+            <Label
+                Text="🏐 HandClub360"
+                TextColor="#0057FF"
+                FontSize="32"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Gestion du club de handball"
+                TextColor="#333333"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Frame
+                BackgroundColor="#0057FF"
+                Padding="20"
+                CornerRadius="10">
+
+                <VerticalStackLayout>
+
+                    <Label
+                        Text="Résumé"
+                        TextColor="White"
+                        FontSize="22"
+                        FontAttributes="Bold" />
+
+                    <Label
+                        Text="👥 250 licenciés"
+                        TextColor="White"/>
+
+                    <Label
+                        Text="🏐 12 équipes"
+                        TextColor="White"/>
+
+                    <Label
+                        Text="🎓 15 arbitres"
+                        TextColor="White"/>
+
+                    <Label
+                        Text="📦 140 matériels"
+                        TextColor="White"/>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+            <Button
+    Text="👥 Gestion des licenciés"
+    Clicked="OnLicenciesClicked" />
+            <Button Text="🏐 Gestion des équipes" />
+            <Button Text="🏆 Gestion des matchs" />
+            <Button Text="🎓 Arbitrage" />
+            <Button Text="📦 Matériel" />
+            <Button Text="🚑 Trousses de secours" />
+            <Button Text="💻 Ordinateurs FDME" />
+            <Button Text="🥤 Gestion des goûters" />
+            <Button Text="💰 Finances" />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
